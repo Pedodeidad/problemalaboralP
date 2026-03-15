@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conciencia Histórica | Proyecto Institucional</title>
+    <style>
+        :root {
+            --burgundy: #630330;
+            --gold: #C5A059;
+            --dark-gray: #2D2D2D;
+            --light-gray: #F4F4F4;
+            --white: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            font-family: 'Garamond', 'Georgia', serif;
+            margin: 0;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .top-banner {
+            background: var(--white);
+            padding: 25px 0;
+            text-align: center;
+            border-bottom: 3px solid var(--burgundy);
+        }
+
+        .top-banner img { height: 90px; }
+
+        nav {
+            background: var(--burgundy);
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+
+        nav li a {
+            text-decoration: none;
+            color: var(--white);
+            padding: 18px 25px;
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        nav li a:hover, nav li a.active { background: var(--gold); color: var(--burgundy); }
+
+        .main-wrapper {
+            max-width: 1200px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .content-card {
+            background: var(--white);
+            padding: 45px;
+            border-top: 8px solid var(--burgundy);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h1 { color: var(--burgundy); font-size: 32px; border-bottom: 2px solid var(--gold); padding-bottom: 10px; }
+        h2 { color: var(--burgundy); font-size: 22px; margin-top: 30px; }
+        
+        p { font-size: 17px; text-align: justify; }
+
+        .sidebar { display: flex; flex-direction: column; gap: 30px; }
+
+        .sidebar img.main-pic {
+            width: 100%;
+            border: 1px solid var(--gold);
+            padding: 8px;
+            background: white;
+            box-shadow: 5px 5px 0px var(--burgundy);
+        }
+
+        .teacher-info {
+            background: var(--burgundy);
+            color: var(--white);
+            padding: 25px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .teacher-info img {
+            width: 110px; height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+            border-top: 5px solid var(--gold);
+        }
+    </style>
+</head>
+<body onclick="playMusic()">
+
+    <audio id="bgMusic" loop>
+        <source src="cancion.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="top-banner">
+        <img src="logo.png" alt="Logo Institucional">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="admin.html">Administración</a></li>
+            <li><a href="historia.html" class="active">Historia</a></li>
+            <li><a href="comu.html">Comunicación</a></li>
+            <li><a href="psico.html">Psicología</a></li>
+            <li><a href="tics.html">TICS</a></li>
+            <li><a href="user.html">Editores</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-wrapper">
+        <div class="content-card">
+            <h1>Conciencia Histórica</h1>
+            <p>La Conciencia Histórica es una herramienta analítica indispensable para comprender el origen y la evolución de las estructuras sociopolíticas. Su estudio permite al estudiante posicionarse como un sujeto crítico frente a la realidad nacional.</p>
+            
+            <h2>Evolución del Estado Mexicano</h2>
+            <p>El programa aborda las transformaciones institucionales de México, analizando los movimientos sociales y los cambios legislativos que han configurado el panorama laboral contemporáneo. Comprender estos procesos históricos es vital para identificar las raíces de cualquier <b>Problema Laboral</b> y proponer soluciones fundamentadas en la justicia social y el derecho.</p>
+            
+            <p>A través del análisis del pasado, se fomenta una visión de futuro donde la participación ciudadana y el respeto a la memoria histórica sean los pilares de una sociedad más equitativa y democrática.</p>
+        </div>
+
+        <div class="sidebar">
+            <img src="p3.png" alt="Conciencia Histórica" class="main-pic">
+            
+            <div class="teacher-info">
+                <img src="img2.png" alt="Docente Sergio">
+                <div style="font-weight: bold; font-size: 18px;">Sergio Jovanni</div>
+                <div style="color: var(--gold); font-size: 13px; text-transform: uppercase; margin-top: 5px;">Docente de Historia</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 COBAT 22 | REYNOSA, TAMAULIPAS
+    </footer>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("bgMusic");
+            if (audio.paused) { audio.play(); }
+        }
+    </script>
+</body>
+</html>
+
