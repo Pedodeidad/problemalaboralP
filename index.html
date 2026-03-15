@@ -3,132 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problema Laboral | Sweet Edition 🍮</title>
+    <title>Proyecto Institucional | COBAT 22</title>
     <style>
         :root {
-            --honey-yellow: #FFD95A;
-            --soft-cream: #FFF7D4;
-            --flan-brown: #C07F00;
+            --burgundy: #630330;    /* Vino fuerte */
+            --gold: #C5A059;        /* Dorado institucional */
+            --dark-gray: #2D2D2D;   /* Gris oxford para texto */
+            --light-gray: #F4F4F4;  /* Fondo suave */
             --white: #FFFFFF;
         }
 
         body {
-            background-color: var(--soft-cream);
-            /* Patrón de cuadros blancos tipo mantel cute */
-            background-image: linear-gradient(45deg, var(--white) 25%, transparent 25%), 
-                              linear-gradient(-45deg, var(--white) 25%, transparent 25%), 
-                              linear-gradient(45deg, transparent 75%, var(--white) 75%), 
-                              linear-gradient(-45deg, transparent 75%, var(--white) 75%);
-            background-size: 40px 40px;
-            font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+            background-color: var(--light-gray);
+            font-family: 'Garamond', 'Georgia', serif; /* Fuente más formal */
             margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            color: var(--dark-gray);
+            line-height: 1.6;
         }
 
-        /* --- LOGO Y ENCABEZADO --- */
-        header {
-            width: 100%;
-            background: var(--honey-yellow);
-            padding: 20px 0;
+        /* --- TOP LOGO AREA --- */
+        .top-banner {
+            background: var(--white);
+            padding: 25px 0;
             text-align: center;
-            border-bottom: 5px solid var(--flan-brown);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--burgundy);
         }
 
-        .logo-container img {
-            height: 80px;
-            filter: drop-shadow(2px 2px 0px white);
+        .top-banner img {
+            height: 90px;
+            object-fit: contain;
         }
 
-        /* --- MENÚ CUTE --- */
+        /* --- NAVIGATION BAR --- */
         nav {
-            margin: 20px 0;
+            background: var(--burgundy);
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         nav ul {
             list-style: none;
+            margin: 0;
             padding: 0;
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
         }
 
-        nav a {
+        nav li a {
             text-decoration: none;
-            color: var(--flan-brown);
-            background: var(--white);
-            padding: 10px 20px;
-            border-radius: 20px;
-            border: 3px solid var(--honey-yellow);
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-
-        nav a:hover, nav a.active {
-            background: var(--honey-yellow);
             color: var(--white);
-            transform: scale(1.1) rotate(-2deg);
+            padding: 18px 25px;
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s;
         }
 
-        /* --- CONTENEDOR PRINCIPAL --- */
-        .main-card {
-            background: var(--white);
-            width: 90%;
-            max-width: 900px;
-            border: 6px solid var(--honey-yellow);
-            border-radius: 40px;
-            padding: 40px;
-            margin-bottom: 50px;
+        nav li a:hover, nav li a.active {
+            background: var(--gold);
+            color: var(--burgundy);
+        }
+
+        /* --- MAIN CONTENT --- */
+        .main-wrapper {
+            max-width: 1200px;
+            margin: 50px auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            box-shadow: 0 10px 0px var(--flan-brown);
+            grid-template-columns: 1fr 400px;
+            gap: 50px;
+            padding: 0 20px;
         }
 
-        .content h1 {
-            color: var(--flan-brown);
-            font-size: 32px;
-            margin-top: 0;
+        .content-card {
+            background: var(--white);
+            padding: 50px;
+            border-top: 8px solid var(--burgundy);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
         }
 
-        .content p {
-            color: #555;
-            line-height: 1.6;
+        h1 {
+            color: var(--burgundy);
+            font-size: 38px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        p {
             font-size: 18px;
+            text-align: justify;
+            margin-bottom: 20px;
         }
 
-        .flan-tag {
-            background: var(--soft-cream);
-            border: 2px dashed var(--flan-brown);
-            padding: 15px;
-            border-radius: 15px;
-            margin: 20px 0;
+        .quote-box {
+            border-left: 5px solid var(--gold);
+            background: #FFF9F0;
+            padding: 25px;
+            margin: 35px 0;
+            font-style: italic;
+            color: var(--burgundy);
+            font-weight: bold;
         }
 
-        /* --- IMAGEN --- */
-        .image-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .main-img {
+        /* --- IMAGE COLUMN --- */
+        .image-col img {
             width: 100%;
-            border-radius: 30px;
-            border: 5px solid var(--soft-cream);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid var(--gold);
+            padding: 10px;
+            background: var(--white);
+            box-shadow: 10px 10px 0px var(--burgundy);
+        }
+
+        .image-caption {
+            background: var(--burgundy);
+            color: var(--gold);
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+            font-family: sans-serif;
+            font-size: 12px;
         }
 
         footer {
-            margin-bottom: 30px;
-            color: var(--flan-brown);
-            font-weight: bold;
+            background: var(--dark-gray);
+            color: var(--white);
             text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+            border-top: 5px solid var(--gold);
+        }
+
+        .footer-logo {
+            color: var(--gold);
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -138,45 +154,48 @@
         <source src="cancion.mp3" type="audio/mpeg">
     </audio>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo">
-        </div>
-    </header>
+    <div class="top-banner">
+        <img src="logo.png" alt="Logo Institucional COBAT">
+    </div>
 
     <nav>
         <ul>
             <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="admin.html">Admin II</a></li>
-            <li><a href="historia.html">Conciencia</a></li>
+            <li><a href="admin.html">Administración</a></li>
+            <li><a href="historia.html">Historia</a></li>
             <li><a href="comu.html">Comunicación</a></li>
             <li><a href="psico.html">Psicología</a></li>
-            <li><a href="tics.html">TICS</a></li> <li><a href="user.html">Editores</a></li>
+            <li><a href="tics.html">TICS</a></li>
+            <li><a href="user.html">Editores</a></li>
         </ul>
     </nav>
 
-    <div class="main-card">
-        <div class="content">
-            <h1>Problema Laboral ✨</h1>
-            <p>¡Hola! Bienvenidos a nuestra entrega especial del proyecto de la clase de <b>TICS</b>.</p>
+    <div class="main-wrapper">
+        <div class="content-card">
+            <h1>Problema Laboral</h1>
+            <p>
+                El presente portal digital constituye la entrega final del proyecto <b>"Problema Laboral"</b>, una iniciativa académica diseñada para demostrar la convergencia entre la gestión administrativa, el análisis social y las herramientas tecnológicas avanzadas.
+            </p>
             
-            <div class="flan-tag">
-                <b>Misión del Proyecto:</b> Recopilar de forma dulce y organizada toda la información de nuestras materias del semestre.
+            <div class="quote-box">
+                "La excelencia académica se manifiesta a través de la síntesis del conocimiento y su aplicación práctica en el entorno digital contemporáneo."
             </div>
 
-            <p>Este sitio ha sido creado con mucho cariño para presentar una solución creativa a los retos académicos, uniendo el diseño visual con la tecnología. Aquí encontrarás los resúmenes de nuestras clases, los objetivos de aprendizaje y a los profes que nos acompañan.</p>
-            
-            <p>¡Explora las pestañas de arriba para ver todo lo que hemos preparado!</p>
+            <p>
+                Bajo la supervisión del cuerpo docente del Colegio de Bachilleres del Estado de Tamaulipas (COBAT 22), el estudiantado ha desarrollado esta plataforma como un ejercicio de profesionalización, integrando contenidos multidisciplinarios que responden a las exigencias del mercado laboral actual y la ética ciudadana.
+            </p>
         </div>
 
-        <div class="image-section">
-            <img src="cute_index.png" alt="Bienvenida" class="main-img">
-            <p style="color: var(--flan-brown); font-size: 14px; margin-top: 10px;">✿ Welcome to our project ✿</p>
+        <div class="image-col">
+            <img src="p1.png" alt="Imagen Académica Principal">
+            <div class="image-caption">SISTEMA INTEGRAL DE INFORMACIÓN V1.0</div>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 COBAT 22 | Proyecto TICS "Problema Laboral" 🍮
+        <div class="footer-logo">COBAT 22</div>
+        REYNOSA, TAMAULIPAS | CICLO ESCOLAR 2026<br>
+        TECNOLOGÍAS DE LA INFORMACIÓN Y LA COMUNICACIÓN
     </footer>
 
     <script>
